@@ -4,7 +4,7 @@
     <!-- logo for regular state and mobile devices -->
     <span class="logo-lg"><b>GOAL</b>Signal</span>
 </a>
-
+@if(count($user) != 0)
 <!-- Header Navbar -->
 <nav class="navbar navbar-static-top" role="navigation">
     <!-- Sidebar toggle button-->
@@ -13,3 +13,4 @@
     </a>
 
 </nav>
+@endif
