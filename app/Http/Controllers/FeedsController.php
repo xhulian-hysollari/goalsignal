@@ -254,7 +254,7 @@ class FeedsController extends Controller
     {
         try {
             Feeds::where('id', $id)->delete();
-            return redirect(url('feeds'))->with('success');
+            return redirect(url('/'))->with('success');
         } catch (\Exception $e) {
             dd($e->getMessage());
             return redirect()->back()->with('error', $e->getMessage());
