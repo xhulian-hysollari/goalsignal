@@ -37,6 +37,9 @@
             margin-top: 20px;
         }
     </style>
+
+    <title>GOALSignal</title>
+
 </head>
 <body>
 <header>

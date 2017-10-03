@@ -17,6 +17,8 @@
     <link href="{{asset('dist/summernote.css')}}" rel="stylesheet">
 
 
+    <title>GOALSignal</title>
+
     <style>
         *{
             font-size: 18px;
