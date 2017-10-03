@@ -7,7 +7,7 @@ $user = Auth::user();
 
 @if(count($user) != 0)
 
-    <aside class="main-sidebar" style="height: 100%">
+    <aside class="main-sidebar">
         <section class="sidebar">
 
             <!-- Sidebar Menu -->
