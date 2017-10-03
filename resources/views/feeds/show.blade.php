@@ -95,7 +95,7 @@
 
                                     @foreach($results->images as $image)
                                         <div class="item">
-                                            <img src="{{asset('storage/'.$image->path)}}" class="img-responsive" alt=""/>
+                                            <img src="{{asset('storage/'.$image->path)}}" style="min-width: 210px; min-height: 210px;" class="img-responsive" alt=""/>
                                         </div>
                                     @endforeach
 

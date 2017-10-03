@@ -39,8 +39,6 @@
 
 .owl-carousel .owl-item{
     float: left;
-    min-width: 210px;
-    min-height: 210px;
 }
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
