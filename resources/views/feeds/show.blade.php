@@ -70,7 +70,25 @@
                         {{--<a href="#" class="hidden-xs"><i class="fa fa-pinterest-p"></i></a>--}}
                     </div>
                 </figure>
-                {!! $results->body !!}
+
+                <div class="clearfix">
+                    {!! $results->body !!}
+
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 col-md-12">
+                            <div class="featured-inner">
+                                <div id="featured-owl" class="owl-carousel">
+                                    @foreach($results->images as $image)
+                                        <div class="item">
+                                            <img src="{{asset('storage/'.$image->path)}}" class="img-responsive" alt=""/>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         <!-- Post footer -->
             <div class="post-footer">
