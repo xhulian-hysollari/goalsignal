@@ -3,7 +3,7 @@
 @section('meta')
     <meta property="og:url"           content="{{url('feeds/show', $results->id)}}" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Article" />
+    <meta property="og:title"         content="GOALSignal" />
     <meta property="og:description"   content="{{ $results->title }}" />
     <meta property="og:image"         content="{{asset('storage/'.$results->images[0]->path)}}" />
 @stop
