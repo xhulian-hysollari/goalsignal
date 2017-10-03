@@ -6,14 +6,35 @@ $user = Auth::user();
 
 ?>
 
+<style>
+    @media (max-width: 1147px) and (min-width: 992px) {
+
+        #logo {
+            display: none;
+        }
+    }
+    /*@media (max-width: 992px) and (min-width: 992px) {*/
+    /*#smlogo {*/
+    /*display: inline;*/
+    /*}*/
+    /*}*/
+</style>
+
 <nav class="navbar navbar-default navbar-sticky navbar-mobile bootsnav">
+
+    <a class="navbar-brand hidden-xs hidden-sm" href="{{url('/')}}" id="logo" style="margin-top: -5px;">
+        <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/137/316242137_695ddda0-ff3d-4e78-9899-3d65487ae80f.png?cb=1507023955" alt=""></a>
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#brand"><img
-                        src="{{asset('assets/images/logo.png')}}" class="logo" alt=""></a>
+            <a class="navbar-brand hidden-md hidden-lg" id="smlogo" href="{{url('/')}}" >
+                <img style="margin-top: 15px;"
+                     src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/137/316242137_695ddda0-ff3d-4e78-9899-3d65487ae80f.png?cb=1507023955"
+                     class="logo" alt="">
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-left" data-in="" data-out="">
