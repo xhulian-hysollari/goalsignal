@@ -38,6 +38,12 @@
         section.social-icon > div a i.fa-facebook {
             background-color: #4c66a3;
         }
+
+        .item img {
+            height: 200px;
+            width: 300px;
+
+        }
     </style>
 
 @stop
@@ -75,7 +81,7 @@
                     {!! $results->body !!}
 
                     <div class="row">
-                        <div class="col-sm-12 col-xs-12 col-md-12">
+                        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                             <div class="featured-inner">
                                 <div id="featured-owl" class="owl-carousel">
                                     @foreach($results->images as $image)
@@ -87,6 +93,23 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                            <div class="featured-inner">
+                                <div id="featured-owl" class="owl-carousel">
+
+                                    @foreach($results->images as $image)
+                                        <div class="item">
+                                            <img src="{{asset('storage/'.$image->path)}}" class="img-responsive" alt=""/>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
