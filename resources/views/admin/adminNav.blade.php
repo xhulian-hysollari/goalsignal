@@ -2,9 +2,7 @@
 
     <!-- logo for regular state and mobile devices -->
 
-    <span class="logo-mini"><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/137/316242137_695ddda0-ff3d-4e78-9899-3d65487ae80f.png?cb=1507023955" class="img-responsive"></span>
-
-    <span class="logo-lg"><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/137/316242137_695ddda0-ff3d-4e78-9899-3d65487ae80f.png?cb=1507023955" class="img-responsive"></span>
+    <span class="logo-lg"><img src="{{asset('images/logo.jpg')}}" class="img-responsive"></span>
 
 
 </a>

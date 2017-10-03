@@ -23,7 +23,7 @@ $user = Auth::user();
 <nav class="navbar navbar-default navbar-sticky navbar-mobile bootsnav">
 
     <a class="navbar-brand hidden-xs hidden-sm" href="{{url('/')}}" id="logo" style="margin-top: -5px;">
-        <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/137/316242137_695ddda0-ff3d-4e78-9899-3d65487ae80f.png?cb=1507023955" alt=""></a>
+        <img src="{{asset('images/logo.jpg')}}" alt=""></a>
 
     <div class="container">
         <div class="navbar-header">
@@ -31,9 +31,7 @@ $user = Auth::user();
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand hidden-md hidden-lg" id="smlogo" href="{{url('/')}}" >
-                <img style="margin-top: 15px;"
-                     src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/137/316242137_695ddda0-ff3d-4e78-9899-3d65487ae80f.png?cb=1507023955"
-                     class="logo" alt="">
+                <img style="margin-top: 15px;" src="{{asset('images/logo.jpg')}}" class="logo" alt="">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
