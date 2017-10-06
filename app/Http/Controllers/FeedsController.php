@@ -190,9 +190,12 @@ class FeedsController extends Controller
 
         try {
             $results = Feeds::where('id', $id)->first();
-            $resulted = Categories::all();
 
-            return view('feeds.edit', compact('results', 'resulted'));
+            $resulted = Categories::where('id', '!=', $results->category_id)->get();
+
+            $ownCateg = Categories::where('id', $results->category_id)->first();
+
+            return view('feeds.edit', compact('results', 'resulted', 'ownCateg'));
         } catch (\Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }

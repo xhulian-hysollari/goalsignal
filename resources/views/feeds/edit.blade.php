@@ -20,7 +20,7 @@
 
     <br>
 
-    {!! Form::model($results, ['route' => ['feeds.update', $results -> id], 'method' => 'PATCH', 'novalidate', 'files' => true], $resulted) !!}
+    {!! Form::model($results, ['route' => ['feeds.update', $results -> id], 'method' => 'PATCH', 'novalidate', 'files' => true], $resulted, $ownCateg) !!}
     @include('feeds.form', [$button = trans('feeds.update')])
     {!! Form::close() !!}
 

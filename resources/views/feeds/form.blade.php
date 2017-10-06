@@ -69,6 +69,9 @@
 
             <select name="category_id" id="category_id">
                 @if(isset($resulted) && count($resulted)>0)
+                    @if(isset($ownCateg))
+                        <option value="{{$ownCateg->id}}">{!! $ownCateg->name !!}</option>
+                    @endif
                     @foreach($resulted as $result)
                         <option value="{{$result->id}}">{!! $result->name !!}</option>
                     @endforeach
