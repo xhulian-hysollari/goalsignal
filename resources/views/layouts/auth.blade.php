@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="author" content="Marin Hysollari">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
