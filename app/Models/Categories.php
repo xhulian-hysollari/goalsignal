@@ -20,7 +20,7 @@ class Categories extends Model
     }
 
     public function getNewsAttribute(){
-        return Feeds::where('category_id', $this->attributes['id'])->take(4)->get();
+        return Feeds::where('category_id', $this->attributes['id'])->latest()->take(4)->get();
     }
 
 }
