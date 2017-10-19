@@ -159,7 +159,6 @@ class FeedsController extends Controller
 
             return view('feeds.show', compact('results', 'resulted', 'categorized', 'category'));
         } catch (\Exception $e) {
-            dd($e ->getMessage());
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
