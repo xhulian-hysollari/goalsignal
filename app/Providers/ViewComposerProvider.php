@@ -6,6 +6,7 @@ use App\Models\Categories;
 use App\Models\Feeds;
 use App\Models\Pages;
 use Illuminate\Support\ServiceProvider;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class ViewComposerProvider extends ServiceProvider
 {
