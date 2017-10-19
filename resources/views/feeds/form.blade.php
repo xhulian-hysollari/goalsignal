@@ -84,6 +84,19 @@
         <br>
 
         <div class="control">
+            <label for="locale">Locale</label>
+
+            <select name="locale" id="locale">
+
+                <option value="English">English</option>
+                <option value="Albanian">Shqip</option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div class="control">
             <label for="is_featured">{{trans('feeds.featured')}}</label>
             <input type="checkbox" name="is_featured" id="is_featured" checked="unchecked" value="1">
         </div>
