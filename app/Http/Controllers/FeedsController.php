@@ -88,6 +88,7 @@ class FeedsController extends Controller
             $feeds->user_id = Auth::id();
             $feeds->title = Input::get('title');
             $feeds->body = Input::get('body');
+            $feeds->locale = Input::get('locale');
             $feeds->view_count = 0;
             $plucked = Input::get('category_id');
             $feeds->category_id = $plucked;
@@ -223,6 +224,8 @@ class FeedsController extends Controller
             $feed = Feeds::where('id', $id)->first();
             $feed->title = Input::get('title');
             $feed->body = Input::get('body');
+            $feed->locale = Input::get('locale');
+
             $feed->category_id = Input::get('category_id');
 
             if (Input::get('is_featured') == 1) {
