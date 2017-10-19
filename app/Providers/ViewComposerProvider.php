@@ -22,17 +22,22 @@ class ViewComposerProvider extends ServiceProvider
         });
 
         view()->composer('partials.sideContent', function ($view) {
-            $view->with('sideRes', Feeds::latest()->take(3)->get());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('sideRes', Feeds::where('locale', $locale)->latest()->take(3)->get());
         });
 
         view()->composer('partials.sideContent', function ($view) {
-            $view->with('mostViewed', Feeds::latest('view_count')->take(7)->get());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('mostViewed', Feeds::where('locale', $locale)->latest('view_count')->take(7)->get());
         });
 
 
         view()->composer('partials.sideContent', function ($view) {
-            $view->with('featured', Feeds::where('is_featured', 1)->latest()->take(7)->get());
+            $locale = LaravelLocalization::getCurrentLocaleName();
 
+            $view->with('featured', Feeds::where('locale', $locale)->where('is_featured', 1)->latest()->take(7)->get());
         });
 
 

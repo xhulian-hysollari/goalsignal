@@ -16,11 +16,15 @@ class Categories extends Model
     }
 
     public function getLatestNewsAttribute(){
-        return Feeds::where('category_id', $this->attributes['id'])->latest()->first();
+        $locale = LaravelLocalization::getCurrentLocaleName();
+
+        return Feeds::where('locale', $locale)->where('category_id', $this->attributes['id'])->latest()->first();
     }
 
     public function getNewsAttribute(){
-        return Feeds::where('category_id', $this->attributes['id'])->latest()->take(4)->get();
+        $locale = LaravelLocalization::getCurrentLocaleName();
+
+        return Feeds::where('locale', $locale)->where('category_id', $this->attributes['id'])->latest()->take(4)->get();
     }
 
 }
