@@ -36,7 +36,9 @@ return [
     'about_us' => 'About Us',
     'recent' => 'Recent',
     'more_from' => 'More articles from',
-    'more' => 'View more news'
+    'more' => 'View more news',
+
+    'locale' => 'Language'
 
 ];
 

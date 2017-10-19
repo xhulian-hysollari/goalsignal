@@ -37,7 +37,9 @@ return [
     'about_us' => 'Rreth nesh',
     'recent' => 'Më të fundit',
     'more_from' => 'Më shumë artikuj nga',
-    'more' => 'Shiko më shumë lajme'
+    'more' => 'Shiko më shumë lajme',
+
+    'locale' => 'Gjuha'
 
 
    // {{trans('feeds.more')}}

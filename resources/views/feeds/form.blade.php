@@ -84,7 +84,7 @@
         <br>
 
         <div class="control">
-            <label for="locale">Locale</label>
+            <label for="locale">{{trans('feeds.locale')}}</label>
 
             <select name="locale" id="locale">
 
