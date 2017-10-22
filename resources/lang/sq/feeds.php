@@ -39,7 +39,7 @@ return [
     'more_from' => 'Më shumë artikuj nga',
     'more' => 'Shiko më shumë lajme',
 
-    'locale' => 'Gjuha'
+    'locale' => 'Kujdes! Ky postim do të jetë në Shqip'
 
 
    // {{trans('feeds.more')}}

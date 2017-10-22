@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePagesRequest;
 use App\Models\Pages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class PagesController extends Controller
 {
@@ -15,7 +16,9 @@ class PagesController extends Controller
     {
         try {
 
-            $results = Pages::all();
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $results = Pages::where('locale', $locale)->get();
 
             return view('pages.index', compact('results'));
         } catch (\Exception $ex) {
@@ -46,11 +49,13 @@ class PagesController extends Controller
     public function store(CreatePagesRequest $request)
     {
         try {
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
             $pages = new Pages();
             $pages->title = Input::get('title');
             $pages->slug = Input::get('slug');
             $pages->body = Input::get('body');
-
+            $pages->locale = $locale;
 
             if (Input::get('on_footer') == 1) {
                 $pages->on_footer = true;
@@ -78,7 +83,9 @@ class PagesController extends Controller
     {
         try {
 
-            $result = Pages::where('slug', $slug)->first();
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $result = Pages::where('locale', $locale)->first();
 
             return view('pages.show', compact('result'));
 
@@ -99,7 +106,9 @@ class PagesController extends Controller
     {
         try {
 
-            $results = Pages::where('id', $id)->first();
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $results = Pages::where('locale', $locale)->where('id', $id)->first();
 
             return view('pages.edit', compact('results'));
 
@@ -118,12 +127,14 @@ class PagesController extends Controller
     public function update(CreatePagesRequest $request, $id)
     {
         try {
+            $locale = LaravelLocalization::getCurrentLocaleName();
 
             $pages = Pages::where('id', $id)->first();
 
             $pages->title = Input::get('title');
             $pages->slug = Input::get('slug');
             $pages->body = Input::get('body');
+            $pages->locale = $locale;
 
             if (Input::get('on_footer') == 1) {
                 $pages->on_footer = true;

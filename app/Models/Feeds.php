@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Images;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class Feeds extends Model
 {
@@ -27,7 +28,9 @@ class Feeds extends Model
     }
 
     public function getCategoriesAttribute() {
-        return Categories::where('id', $this->attributes['category_id'])->first();
+        $locale = LaravelLocalization::getCurrentLocaleName();
+
+        return Categories::where('locale', $locale)->where('id', $this->attributes['category_id'])->first();
     }
 
     public function category() {

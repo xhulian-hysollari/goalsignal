@@ -6,6 +6,7 @@ use App\Http\Requests\CreateCategoriesRequest;
 use App\Models\Categories;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class CategoriesController extends Controller
 {
@@ -14,7 +15,9 @@ class CategoriesController extends Controller
     {
         try {
 
-            $results = Categories::all();
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $results = Categories::where('locale', $locale)->get();
 
             return view('categories.index', compact('results'));
         } catch (\Exception $ex) {
@@ -36,11 +39,15 @@ class CategoriesController extends Controller
     {
 
         try {
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
             $categ = new Categories();
 
             $categ->name = Input::get('name');
             $categ->url = Input::get('url');
             $categ->optional = Input::get('optional');
+
+            $categ->locale = $locale;
 
             if (Input::get('on_header') == 1) {
                 $categ->on_header = true;
@@ -70,7 +77,9 @@ class CategoriesController extends Controller
     public function edit($id)
     {
         try {
-            $categ = Categories::where('id', $id)->first();
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $categ = Categories::where('locale', $locale)->where('id', $id)->first();
             return view('categories.edit', compact('categ'));
 
         } catch (\Exception $e) {
@@ -81,11 +90,15 @@ class CategoriesController extends Controller
     public function update(CreateCategoriesRequest $request, $id)
     {
         try {
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
             $categ = Categories::where('id', $id)->first();
 
             $categ->name = Input::get('name');
             $categ->url = Input::get('url');
             $categ->optional = Input::get('optional');
+
+            $categ->locale = $locale;
 
             if (Input::get('on_header') == 1) {
                 $categ->on_header = true;

@@ -14,6 +14,7 @@ return [
     'modalBody' => 'Are you sure you want to delete this category?',
     'delete' => 'Delete Category',
     'close' => 'Close',
+    'header' => 'Appear on header',
 
 ];
 

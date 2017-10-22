@@ -38,7 +38,7 @@ return [
     'more_from' => 'More articles from',
     'more' => 'View more news',
 
-    'locale' => 'Language'
+    'locale' => 'Warning! This post will be in English.'
 
 ];
 

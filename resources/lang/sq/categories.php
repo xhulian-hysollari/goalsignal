@@ -14,7 +14,7 @@ return [
     'modalBody' => 'Jeni të sigurt që doni të fshini këtë Kategori?',
     'delete' => 'Fshini Kategorine',
     'close' => 'Mbyll',
-
+    'header' => 'Shfaq ne menu',
 ];
 
 // {{trans('categories.modalBody')}}

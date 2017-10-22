@@ -33,7 +33,7 @@ class FeedsController extends Controller
 
         $results = Feeds::where('locale', $locale)->latest()->paginate(10);
 
-        $topCategory = Categories::take(3)->get();
+        $topCategory = Categories::where('locale', $locale)->take(3)->get();
 
         $slideshows = Feeds::where('locale', $locale)->where('is_featured', 1)->latest()->take(3)->get();
 
@@ -69,7 +69,9 @@ class FeedsController extends Controller
     {
 
         try  {
-            $resulted = Categories::all();
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $resulted = Categories::where('locale', $locale)->get();
 
             return view('feeds.create', compact('resulted'));
 
@@ -84,11 +86,13 @@ class FeedsController extends Controller
 
         try {
 
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
             $feeds = new Feeds();
             $feeds->user_id = Auth::id();
             $feeds->title = Input::get('title');
             $feeds->body = Input::get('body');
-            $feeds->locale = Input::get('locale');
+            $feeds->locale = $locale;
             $feeds->view_count = 0;
             $plucked = Input::get('category_id');
             $feeds->category_id = $plucked;
@@ -140,7 +144,7 @@ class FeedsController extends Controller
 
 
             //for passing the category name in the post
-            $category = Categories::where('id', $results->category_id)->first();
+            $category = Categories::where('locale', $locale)->where('id', $results->category_id)->first();
 
 //            dd($category);
 
@@ -169,7 +173,7 @@ class FeedsController extends Controller
         try {
             $locale = LaravelLocalization::getCurrentLocaleName();
 
-            $categ = Categories::where('url', $url)->first();
+            $categ = Categories::where('locale', $locale)->where('url', $url)->first();
 
             $categorized = Feeds::where('locale', $locale)->where('category_id', $categ->id)->latest()->simplePaginate(10);
 
@@ -194,11 +198,14 @@ class FeedsController extends Controller
     {
 
         try {
+
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
             $results = Feeds::where('id', $id)->first();
 
-            $resulted = Categories::where('id', '!=', $results->category_id)->get();
+            $resulted = Categories::where('locale', $locale)->where('id', '!=', $results->category_id)->get();
 
-            $ownCateg = Categories::where('id', $results->category_id)->first();
+            $ownCateg = Categories::where('locale', $locale)->where('id', $results->category_id)->first();
 
             return view('feeds.edit', compact('results', 'resulted', 'ownCateg'));
         } catch (\Exception $e) {
@@ -218,11 +225,12 @@ class FeedsController extends Controller
     {
 
         try {
+            $locale = LaravelLocalization::getCurrentLocaleName();
 
             $feed = Feeds::where('id', $id)->first();
             $feed->title = Input::get('title');
             $feed->body = Input::get('body');
-            $feed->locale = Input::get('locale');
+            $feed->locale = $locale;
 
             $feed->category_id = Input::get('category_id');
 

@@ -46,16 +46,16 @@ $user = Auth::user();
                     @endforeach
                 @endif
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{trans('feeds.about_us')}}</a>
-                    <ul class="dropdown-menu animated">
-                        @if(isset($pages) && count($pages) > 0)
-                            @foreach($pages as $page)
-                                <li><a href="{{url('dashboard/pages/show', $page->slug)}}">{{ucwords($page->title)}}</a></li>
-                            @endforeach
-                        @endif
-                    </ul>
-                </li>
+                @if(isset($pages) && count($pages) > 0)
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{trans('feeds.about_us')}}</a>
+                        <ul class="dropdown-menu animated">
+                                @foreach($pages as $page)
+                                    <li><a href="{{url('dashboard/pages/show', $page->slug)}}">{{ucwords($page->title)}}</a></li>
+                                @endforeach
+                        </ul>
+                    </li>
+                @endif
 
 
                 @if(Auth::check())

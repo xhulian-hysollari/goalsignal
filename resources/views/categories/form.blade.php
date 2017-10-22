@@ -52,7 +52,7 @@
         <br>
 
         <div class="control">
-            <label for="on_header">On Header</label>
+            <label for="on_header">{{trans('categories.header')}}</label>
             <input type="checkbox" name="on_header" id="on_header" value="1">
         </div>
 

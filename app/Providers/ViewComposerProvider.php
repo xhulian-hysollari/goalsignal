@@ -19,7 +19,9 @@ class ViewComposerProvider extends ServiceProvider
     {
 
         view()->composer('partials.navbar', function ($view) {
-            $view->with('resulted', Categories::where('on_header', 1)->latest('updated_at')->take(3)->get());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('resulted', Categories::where('locale', $locale)->where('on_header', 1)->latest('updated_at')->take(3)->get());
         });
 
         view()->composer('partials.sideContent', function ($view) {
@@ -43,25 +45,30 @@ class ViewComposerProvider extends ServiceProvider
 
 
         view()->composer('partials.footer', function($view) {
-            $view->with('categories', Categories::all());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('categories', Categories::where('locale', $locale)->get());
         });
 
 
         view()->composer('partials.sideContent', function($view) {
-            $view->with('categories', Categories::all());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('categories', Categories::where('locale', $locale)->get());
         });
 
 
         view()->composer('partials.footer', function($view) {
-            $view->with('pages', Pages::where('on_footer',1)->get());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('pages', Pages::where('locale', $locale)->where('on_footer',1)->get());
         });
 
         view()->composer('partials.navbar', function($view) {
-            $view->with('pages', Pages::all());
+            $locale = LaravelLocalization::getCurrentLocaleName();
+
+            $view->with('pages',  Pages::where('locale', $locale)->get());
         });
-
-
-
 
     }
 
