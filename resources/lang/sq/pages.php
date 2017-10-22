@@ -13,6 +13,7 @@ return [
     'modalBody' => 'Jeni të sigurt që doni të fshini këtë Faqe?',
     'delete' => 'Fshini Faqen',
     'close' => 'Mbyll',
+    'locale' => 'Kujdes! Kjo faqe do të jetë në Shqip, dhe do të shfaqet vetëm në versionin shqip të website-it!'
 
 ];
 

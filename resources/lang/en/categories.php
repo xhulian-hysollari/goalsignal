@@ -15,7 +15,7 @@ return [
     'delete' => 'Delete Category',
     'close' => 'Close',
     'header' => 'Appear on header',
-
+    'locale' => 'Warning! This category will be in English, and will only appear in the English version of the website!'
 ];
 
 ?>

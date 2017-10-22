@@ -47,6 +47,13 @@
         </div>
 
         <br>
+
+        <div class="control">
+            <label class="box"><h1 style="color: red">{{trans('pages.locale')}}</h1></label>
+        </div>
+
+        <br>
+
         <div class="control">
             <button class="button is-fullwidth is-primary is-outlined">{{$button}}</button>
         </div>

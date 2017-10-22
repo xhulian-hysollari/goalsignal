@@ -15,6 +15,8 @@ return [
     'delete' => 'Fshini Kategorine',
     'close' => 'Mbyll',
     'header' => 'Shfaq ne menu',
+    'locale' => 'Kujdes! Kjo kategori do të jetë në Shqip, dhe do të shfaqet vetëm në versionin shqip të website-it!'
+
 ];
 
 // {{trans('categories.modalBody')}}

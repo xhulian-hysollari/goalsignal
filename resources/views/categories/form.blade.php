@@ -59,6 +59,12 @@
         <br>
 
         <div class="control">
+            <label class="box"><h1 style="color: red">{{trans('categories.locale')}}</h1></label>
+        </div>
+
+        <br>
+
+        <div class="control">
             <button type="submit" class="button is-primary is-fullwidth">{{$button}}</button>
         </div>
     </div>
