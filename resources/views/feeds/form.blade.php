@@ -91,7 +91,7 @@
         <br>
 
         <div class="control">
-            <label>{{trans('feeds.locale')}}</label>
+            <label class="box"><h1 style="color: red">{{trans('feeds.locale')}}</h1></label>
         </div>
 
         <br>
