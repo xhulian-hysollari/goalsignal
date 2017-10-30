@@ -50,13 +50,15 @@ $user = Auth::user();
 
                 {{--Change language--}}
 
-                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <li>
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['native'] }}
-                        </a>
-                    </li>
-                @endforeach
+                {{--Remove the commenting when adding the previous language back--}}
+
+                {{--@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+                    {{--<li>--}}
+                        {{--<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+                            {{--{{ $properties['native'] }}--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--@endforeach--}}
 
 
 

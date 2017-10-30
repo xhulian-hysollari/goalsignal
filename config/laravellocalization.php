@@ -170,7 +170,13 @@ return [
         //'tn'          => ['name' => 'Tswana',                 'script' => 'Latn', 'native' => 'Setswana', 'regional' => 'tn_ZA'],
 
 
-          'sq'          => ['name' => 'Albanian',               'script' => 'Latn', 'native' => 'Shqip', 'regional' => 'sq_AL'],
+
+
+//        Remove the commenting below
+
+//          'sq'          => ['name' => 'Albanian',               'script' => 'Latn', 'native' => 'Shqip', 'regional' => 'sq_AL'],
+
+
 
 
         //'sid'         => ['name' => 'Sidamo',                 'script' => 'Latn', 'native' => 'Sidaamu Afo', 'regional' => 'sid_ET'],
