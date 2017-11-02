@@ -49,7 +49,7 @@
 
         <div class="file has-name is-fullwidth">
             <label class="file-label">
-                <input class="file-input" type="file" name="image_path[]" id="image_path" value="{{$results->image_path}}" multiple>
+                <input class="file-input" type="file" name="image_path[]" id="image_path" value="{{$results->image_path}}" multiple accept="image/*">
                 <span class="file-cta">
                     <span class="file-icon">
                     <i class="fa fa-upload"></i>
