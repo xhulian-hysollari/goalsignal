@@ -110,7 +110,7 @@ class UserController extends Controller
             $us = Auth::user();
             $user = User::where('id', $us->id)->first();
 
-            $feeds = Feeds::where('user_id', $us->id)->paginate(10);
+            $feeds = Feeds::where('user_id', $us->id)->latest()->paginate(10);
 
             return view('users.show', compact('user', 'feeds'));
         }
