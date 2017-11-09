@@ -94,7 +94,7 @@ class UserController extends Controller
         try {
             $user = User::where('id', $id)->first();
 
-            $feeds = Feeds::where('user_id', $id)->paginate(10);
+            $feeds = Feeds::where('user_id', $id)->latest('created_at')->paginate(10);
 
             return view('users.show', compact('user', 'feeds'));
         }
