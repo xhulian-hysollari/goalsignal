@@ -41,7 +41,7 @@ $user = Auth::user();
                 @if(isset($resulted) && count($resulted)>0)
                     @foreach($resulted as $result)
                         <li>
-                            <a href="{{url('feeds/showCategory', $result->url)}}" style="color:{{$result->optional}}">{{ucwords($result->name)}}</a>
+                            <a href="{{url('feeds/showCategory', $result->url)}}">{{ucwords($result->name)}}</a>
                         </li>
                     @endforeach
                 @endif
