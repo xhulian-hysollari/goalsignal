@@ -42,6 +42,10 @@
             width: 100% !important;
         }
 
+        iframe {
+            width: 100% !important;
+        }
+
     </style>
 
     <title>GOALSignal</title>
