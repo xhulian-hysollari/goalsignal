@@ -37,6 +37,11 @@
         .page_main_wrapper {
             margin-top: 20px;
         }
+
+        .image {
+            width: 100% !important;
+        }
+
     </style>
 
     <title>GOALSignal</title>
