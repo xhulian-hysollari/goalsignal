@@ -38,7 +38,7 @@
             margin-top: 20px;
         }
 
-        .image {
+        img {
             width: 100% !important;
         }
 
