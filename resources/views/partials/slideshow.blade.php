@@ -53,7 +53,7 @@
                                 <a href="{{route('feeds.show', $topNews->id)}}" class="news-image"><img src="{{asset('storage/'.$topNews->images[0]->path)}}" alt="" class="img-responsive"></a>
                                 <div class="post-text">
                                     <span class="post-category">{{$topNews->categories->name}}</span>
-                                    <h2><a href="{{route('feeds.show', $topNews->id)}}">{{$topNews->title}} </a></h2>
+                                    <h2><a href="{{route('feeds.show', $topNews->id)}}">{{str_limit(strip_tags($topNews->title), '20', '...')}} </a></h2>
                                     <ul class="authar-info">
                                         <li class="authar"><a href="#">by {{$topNews->user->name}}</a></li>
                                         <li class="date">{{\Carbon\Carbon::parse($topNews->created_at)->format('d M y')}}</li>
@@ -69,7 +69,7 @@
                                 <a href="{{route('feeds.show', $latest->id)}}" class="news-image"><img src="{{asset('storage/'.$latest->images[0]->path)}}" alt="" class="img-responsive"></a>
                                 <div class="post-text">
                                     <span class="post-category">{{$latest->categories->name}}</span>
-                                    <h2><a href="{{route('feeds.show', $latest->id)}}">{{$latest->title}} </a></h2>
+                                    <h2><a href="{{route('feeds.show', $latest->id)}}">{{str_limit(strip_tags($latest->title), '20', '...')}} </a></h2>
                                     <ul class="authar-info">
                                         <li class="authar"><a href="#">by {{$latest->user->name}}</a></li>
                                         <li class="date">{{\Carbon\Carbon::parse($latest->created_at)->format('d M y')}}</li>
