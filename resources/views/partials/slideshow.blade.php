@@ -16,7 +16,7 @@
 
 <style>
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .post-height-1 .news-image img {
             height: 230px;
         }
