@@ -20,7 +20,7 @@
         height: 230px;
     }
 
-    @media (max-width: 991px) and (min-width: 768px) {
+    @media (max-width: 991px) and (min-width: 769px) {
         .post-height-1 .news-image img {
             height: 320px;
         }
