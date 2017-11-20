@@ -16,15 +16,12 @@
 
 <style>
 
-    .post-height-1 .news-image img {
-        height: 230px;
-    }
-
-    @media (max-width: 991px) and (min-width: 769px) {
+    @media (max-width: 768px) {
         .post-height-1 .news-image img {
-            height: 320px;
+            height: 230px;
         }
     }
+
 
 </style>
 
