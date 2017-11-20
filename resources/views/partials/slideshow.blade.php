@@ -15,9 +15,17 @@
 </div>
 
 <style>
+
     .post-height-1 .news-image img {
         height: 230px;
     }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+        .post-height-1 .news-image img {
+            height: 320px;
+        }
+    }
+
 </style>
 
 <section class="slider-inner">
