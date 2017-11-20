@@ -14,6 +14,12 @@
     </div>
 </div>
 
+<style>
+    .post-height-1 .news-image img {
+        height: 230px;
+    }
+</style>
+
 <section class="slider-inner">
     <div class="container">
         <div class="row thm-margin">
