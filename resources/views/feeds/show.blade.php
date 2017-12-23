@@ -72,23 +72,6 @@
                 </figure>
 
                 <div class="clearfix">
-
-                    {{--Last change made here--}}
-
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client="ca-pub-6040717899325039"
-                         data-ad-slot="9401396896"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-
-
-                    {{--End of last change--}}
-
                     {!! $results->body !!}
 
                     <div class="row">
@@ -156,9 +139,6 @@
 @stop
 
 @section('js')
-
-
-
     <script>
         $('a.de').on('click', function(){
 
