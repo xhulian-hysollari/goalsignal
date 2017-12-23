@@ -5,6 +5,9 @@
         .row-m {
             margin-left: -20px
         }
+        .google-auto-placed {
+            margin-top: 120px;
+        }
     </style>
 
     <section class="articles-wrapper">
