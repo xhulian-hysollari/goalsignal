@@ -50,8 +50,14 @@
 
     <title>GOALSignal</title>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6040717899325039",
+            enable_page_level_ads: true
+        });
+    </script>
 
 </head>
 <body>
@@ -81,15 +87,16 @@
 
 </main>
 <div class="container">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-format="fluid"
          data-ad-layout-key="-fe+6b+2x-jx+pw"
          data-ad-client="ca-pub-6040717899325039"
          data-ad-slot="2289866083"></ins>
-
-
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </div>
 <footer>
     @include('partials.footer')
@@ -105,11 +112,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 @section('js') @show
 
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-6040717899325039",
-        enable_page_level_ads: true
-    });
-</script>
 </body>
 </html>
