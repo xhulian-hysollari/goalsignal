@@ -52,36 +52,6 @@
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-fe+6b+2x-jx+pw"
-         data-ad-client="ca-pub-6040717899325039"
-         data-ad-slot="2289866083"></ins>
-
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:300px;height:600px"
-         data-ad-client="ca-pub-6040717899325039"
-         data-ad-slot="5466747669"></ins>
-
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:728px;height:90px"
-         data-ad-client="ca-pub-6040717899325039"
-         data-ad-slot="5344949425"></ins>
-
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
-         data-ad-layout="in-article"
-         data-ad-format="fluid"
-         data-ad-client="ca-pub-6040717899325039"
-         data-ad-slot="7368477537"></ins>
-
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-8i+1v-dz+eb+hc"
-         data-ad-client="ca-pub-6040717899325039"
-         data-ad-slot="1508935756"></ins>
 
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
