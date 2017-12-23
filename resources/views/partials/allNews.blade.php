@@ -3,7 +3,7 @@
 
     <style>
         .row-m {
-            margin-left: -15px
+            margin-left: -20px
         }
     </style>
 
