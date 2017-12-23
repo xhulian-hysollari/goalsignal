@@ -75,7 +75,6 @@
 
                     {{--Last change made here--}}
 
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <ins class="adsbygoogle"
                          style="display:block; text-align:center;"
                          data-ad-layout="in-article"

@@ -51,7 +51,7 @@
 
     <title>GOALSignal</title>
 
-    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
@@ -88,7 +88,6 @@
 
 </main>
 <div class="container">
-    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-format="fluid"

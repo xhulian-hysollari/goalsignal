@@ -1,8 +1,6 @@
 <div class="col-sm-4 col-p rightSidebar">
 
     <div class="theiaStickySidebar">
-
-    <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- ADD2 -->
     <ins class="adsbygoogle"
          style="display:inline-block;width:100%;height:600px"
