@@ -148,9 +148,7 @@
          data-ad-client="ca-pub-6040717899325039"
          data-ad-slot="9401396896"></ins>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            enable_page_level_ads: true
-        });
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
     <script>
