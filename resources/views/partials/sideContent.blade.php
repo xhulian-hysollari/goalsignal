@@ -1,4 +1,16 @@
 <div class="col-sm-4 col-p rightSidebar">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- ADD2 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:300px;height:600px"
+         data-ad-client="ca-pub-6040717899325039"
+         data-ad-slot="5466747669"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
     <div class="theiaStickySidebar">
 
 
