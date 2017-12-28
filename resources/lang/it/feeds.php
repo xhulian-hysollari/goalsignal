@@ -32,7 +32,7 @@ return [
 
     'home' => 'Pagina Iniziale',
 
-    'lang' => 'Linguaggio',
+    'lang' => 'Lingua',
     'about_us' => 'Chi siamo',
     'recent' => 'Recente',
     'more_from' => 'Altre notizie da',
