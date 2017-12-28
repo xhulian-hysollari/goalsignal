@@ -38,10 +38,10 @@
             margin-top: 20px;
         }
 
-        img {
-            width: 100% !important;
-            height: auto !important;
-        }
+        /*img {*/
+            /*width: 100% !important;*/
+            /*height: auto !important;*/
+        /*}*/
 
         iframe {
             width: 100% !important;
