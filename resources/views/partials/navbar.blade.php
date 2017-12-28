@@ -89,18 +89,18 @@ $user = Auth::user();
 
                 {{--remove the commenting below when you add a new language--}}
 
-                {{--<li class="dropdown">--}}
-                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{trans('feeds.lang')}}</a>--}}
-                    {{--<ul class="dropdown-menu animated">--}}
-                        {{--@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
-                            {{--<li>--}}
-                                {{--<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
-                                    {{--{{ $properties['native'] }}--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                        {{--@endforeach--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{trans('feeds.lang')}}</a>
+                    <ul class="dropdown-menu animated">
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
 
             </ul>
         </div><!-- /.navbar-collapse -->
