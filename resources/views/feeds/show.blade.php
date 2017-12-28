@@ -38,6 +38,13 @@
         section.social-icon > div a i.fa-facebook {
             background-color: #4c66a3;
         }
+
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+
     </style>
 
 @stop
