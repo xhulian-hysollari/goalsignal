@@ -1,4 +1,4 @@
-<footer style="padding: 0">
+
     <div class="container">
         <div class="row">
 
@@ -25,4 +25,3 @@
             @endif
         </div>
     </div>
-</footer>
