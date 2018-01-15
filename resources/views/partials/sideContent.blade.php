@@ -14,12 +14,10 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="home">
 
                     <div class="most-viewed">
-
                         <ins class="adsbygoogle"
-                             style="display:block"
+                             style="display:inline-block;width:100%;height:300px"
                              data-ad-client="ca-pub-6040717899325039"
-                             data-ad-slot="8639091909"
-                             data-ad-format="auto"></ins>
+                             data-ad-slot="5466747669"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -56,12 +54,10 @@
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="profile">
                     <div class="popular-news">
-
                         <ins class="adsbygoogle"
-                             style="display:block"
+                             style="display:inline-block;width:100%;height:300px"
                              data-ad-client="ca-pub-6040717899325039"
-                             data-ad-slot="8639091909"
-                             data-ad-format="auto"></ins>
+                             data-ad-slot="5466747669"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -92,10 +88,9 @@
             <div class="panel_body">
                 <ul style="list-style: none">
                     <ins class="adsbygoogle"
-                         style="display:block"
+                         style="display:inline-block;width:100%;height:300px"
                          data-ad-client="ca-pub-6040717899325039"
-                         data-ad-slot="8639091909"
-                         data-ad-format="auto"></ins>
+                         data-ad-slot="5466747669"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
