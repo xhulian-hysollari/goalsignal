@@ -15,7 +15,15 @@
 
                     <div class="most-viewed">
 
-
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- ADD2 -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:600px"
+                             data-ad-client="ca-pub-6040717899325039"
+                             data-ad-slot="5466747669"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                             @if(isset($mostViewed) && count($mostViewed)>0)
                                 @foreach($mostViewed as $most)
                                     <div class="p-post">
@@ -50,7 +58,15 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="profile">
                     <div class="popular-news">
 
-
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- ADD2 -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:600px"
+                             data-ad-client="ca-pub-6040717899325039"
+                             data-ad-slot="5466747669"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         @if(isset($featured) && count($featured)>0)
                             @foreach($featured as $feat)
 
@@ -77,6 +93,15 @@
             </div>
             <div class="panel_body">
                 <ul style="list-style: none">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- ADD2 -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-6040717899325039"
+                         data-ad-slot="5466747669"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                     @if(isset($categories) && count($categories)>0)
                         @foreach($categories as $category)
                             <li><a href="{{url('feeds/showCategory', $category->url)}}"><h5>{{ucwords($category->name)}}</h5></a></li>
