@@ -11,6 +11,7 @@ use App\Images;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -19,37 +20,38 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class FeedsController extends Controller
 {
 
-    public function index(){
+    public function index()
+    {
 
-    try  {
+        try {
 
-        $locale = LaravelLocalization::getCurrentLocaleName();
+            $locale = LaravelLocalization::getCurrentLocaleName();
 
-        $allNews = Feeds::where('locale', $locale)->latest()->paginate(20);
+            $allNews = Feeds::where('locale', $locale)->latest()->paginate(20);
 
-        $latest = Feeds::where('locale', $locale)->latest()->first();
+            $latest = Feeds::where('locale', $locale)->latest()->first();
 
-        $newstricker = Feeds::where('locale', $locale)->latest()->take('10')->get();
+            $newstricker = Feeds::where('locale', $locale)->latest()->take('10')->get();
 
-        $results = Feeds::where('locale', $locale)->latest()->paginate(10);
+            $results = Feeds::where('locale', $locale)->latest()->paginate(10);
 
-        $topCategory = Categories::where('locale', $locale)->take(3)->get();
+            $topCategory = Categories::where('locale', $locale)->take(3)->get();
 
-        $slideshows = Feeds::where('locale', $locale)->where('is_featured', 1)->latest()->take(3)->get();
+            $slideshows = Feeds::where('locale', $locale)->where('is_featured', 1)->latest()->take(3)->get();
 
-        $topNews = Feeds::where('locale', $locale)->orderBy('view_count','desc')->first();
+            $topNews = Feeds::where('locale', $locale)->orderBy('view_count', 'desc')->first();
 
 
+            return view('feeds.index', compact('results', 'topNews', 'slideshows', 'latest', 'topCategory', 'newstricker', 'allNews'));
 
-        return view('feeds.index', compact('results', 'topNews', 'slideshows', 'latest', 'topCategory', 'newstricker', 'allNews'));
+        } catch (\Exception $e) {
 
-    } catch (\Exception $e) {
-
-        return redirect()->back()->with('error', $e->getMessage());
+            return redirect()->back()->with('error', $e->getMessage());
+        }
     }
-    }
 
-    public function all() {
+    public function all()
+    {
         try {
 
             $locale = LaravelLocalization::getCurrentLocaleName();
@@ -68,7 +70,7 @@ class FeedsController extends Controller
     public function create()
     {
 
-        try  {
+        try {
             $locale = LaravelLocalization::getCurrentLocaleName();
 
             $resulted = Categories::where('locale', $locale)->get();
@@ -85,40 +87,40 @@ class FeedsController extends Controller
     {
 
         try {
+            DB::transaction(function () {
+                $locale = LaravelLocalization::getCurrentLocaleName();
 
-            $locale = LaravelLocalization::getCurrentLocaleName();
+                $feeds = new Feeds();
+                $feeds->user_id = Auth::id();
+                $feeds->title = Input::get('title');
+                $feeds->body = Input::get('body');
+                $feeds->locale = $locale;
+                $feeds->view_count = 0;
+                $plucked = Input::get('category_id');
+                $feeds->category_id = $plucked;
 
-            $feeds = new Feeds();
-            $feeds->user_id = Auth::id();
-            $feeds->title = Input::get('title');
-            $feeds->body = Input::get('body');
-            $feeds->locale = $locale;
-            $feeds->view_count = 0;
-            $plucked = Input::get('category_id');
-            $feeds->category_id = $plucked;
-
-            if (Input::get('is_featured') == 1) {
-                $feeds->is_featured = true;
-            } else {
-                $feeds->is_featured = false;
-            }
-
-            $feeds->save();
-
-
-            if(Input::hasFile('image_path')) {
-                foreach (Input::file('image_path') as $image){
-
-                    $file = $image->store('images');
-                    $images = new Images();
-                    $images->path = $file;
-                    $images->feed_id = $feeds->id;
-                    $images->save();
-
+                if (Input::get('is_featured') == 1) {
+                    $feeds->is_featured = true;
+                } else {
+                    $feeds->is_featured = false;
                 }
-            }
+
+                $feeds->save();
 
 
+                if (Input::hasFile('image_path')) {
+                    foreach (Input::file('image_path') as $image) {
+
+                        $file = $image->store('images');
+                        $images = new Images();
+                        $images->path = $file;
+                        $images->feed_id = $feeds->id;
+                        $images->save();
+
+                    }
+                }
+
+            });
             return redirect(url('/'))->with('success');
         } catch (\Exception $e) {
 
@@ -131,7 +133,7 @@ class FeedsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -152,7 +154,7 @@ class FeedsController extends Controller
 
             $categorized = Feeds::where('locale', $locale)->where('category_id', $results->category_id)->latest()->simplePaginate(20);
 
-            $feedKey = "feeeed_".$id;
+            $feedKey = "feeeed_" . $id;
 
 
             if (!Session::has($feedKey)) {
@@ -186,12 +188,10 @@ class FeedsController extends Controller
     }
 
 
-
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -217,8 +217,8 @@ class FeedsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateFeedRequest $request, $id)
@@ -242,9 +242,8 @@ class FeedsController extends Controller
             $feed->save();
 
 
-
-            if(Input::hasFile('image_path')) {
-                foreach (Input::file('image_path') as $image){
+            if (Input::hasFile('image_path')) {
+                foreach (Input::file('image_path') as $image) {
 
                     $file = $image->store('images');
                     $images = new Images();
@@ -265,7 +264,7 @@ class FeedsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
