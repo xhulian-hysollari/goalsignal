@@ -15,12 +15,11 @@
 
                     <div class="most-viewed">
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- ADD2 -->
                         <ins class="adsbygoogle"
-                             style="display:inline-block;width:300px;height:600px"
+                             style="display:block"
                              data-ad-client="ca-pub-6040717899325039"
-                             data-ad-slot="5466747669"></ins>
+                             data-ad-slot="8639091909"
+                             data-ad-format="auto"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -58,12 +57,11 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="profile">
                     <div class="popular-news">
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- ADD2 -->
                         <ins class="adsbygoogle"
-                             style="display:inline-block;width:300px;height:600px"
+                             style="display:block"
                              data-ad-client="ca-pub-6040717899325039"
-                             data-ad-slot="5466747669"></ins>
+                             data-ad-slot="8639091909"
+                             data-ad-format="auto"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -93,12 +91,11 @@
             </div>
             <div class="panel_body">
                 <ul style="list-style: none">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- ADD2 -->
                     <ins class="adsbygoogle"
-                         style="display:inline-block;width:100%;height:300px"
+                         style="display:block"
                          data-ad-client="ca-pub-6040717899325039"
-                         data-ad-slot="5466747669"></ins>
+                         data-ad-slot="8639091909"
+                         data-ad-format="auto"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
