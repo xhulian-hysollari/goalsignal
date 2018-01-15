@@ -70,30 +70,10 @@
                     <div>
                         <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{url('feeds/show', $results->id)}}','facebook-share-dialog','width=626,height=436');return false;">
                             <i class="fa fa-facebook"></i></a>
-                        {{--<a href="#"><i class="fa fa-facebook"></i></a>--}}
-                        {{--<a href="#"><i class="fa fa-twitter"></i></a>--}}
-                        {{--<a href="#"><i class="fa fa-google-plus"></i></a>--}}
-                        {{--<a href="#" class="hidden-xs"><i class="fa fa-linkedin"></i></a>--}}
-                        {{--<a href="#" class="hidden-xs"><i class="fa fa-pinterest-p"></i></a>--}}
                     </div>
                 </figure>
 
                 <div class="clearfix">
-
-                    {{--Last change made here--}}
-
-                    <ins class="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client="ca-pub-6040717899325039"
-                         data-ad-slot="9401396896"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-
-
-                    {{--End of last change--}}
 
                     {!! $results->body !!}
 
@@ -138,10 +118,6 @@
                             <div class="col-xs-6 col-sm-6 col-md-6 thm-padding">
                             <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{url('feeds/show', $results->id)}}','facebook-share-dialog','width=626,height=436');return false;">
                                 <i class="fa fa-facebook"></i><span style="padding-left: 10px;">{{trans('feeds.shareOnFB')}}</span></a>
-                            {{--<a href="#"><i class="fa fa-twitter"></i></a>--}}
-                            {{--<a href="#"><i class="fa fa-google-plus"></i></a>--}}
-                            {{--<a href="#" class="hidden-xs"><i class="fa fa-linkedin"></i></a>--}}
-                            {{--<a href="#" class="hidden-xs"><i class="fa fa-pinterest-p"></i></a>--}}
                             </div>
 
                             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-top: 9px">
