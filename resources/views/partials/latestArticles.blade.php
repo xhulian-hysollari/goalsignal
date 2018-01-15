@@ -19,7 +19,15 @@
 
 
                         <div class="post-body">
-
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-format="fluid"
+                                 data-ad-layout-key="-d0+5d+77-e2+1d"
+                                 data-ad-client="ca-pub-6040717899325039"
+                                 data-ad-slot="2289866083"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                             @if(isset($results) && count($results) > 0)
                                 @foreach($results as $result)
                                     <div class="news-list-item articles-list">
