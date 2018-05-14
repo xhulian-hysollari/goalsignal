@@ -74,16 +74,7 @@
                 </figure>
 
                 <div class="clearfix">
-                    <ins class="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client="ca-pub-6040717899325039"
-                         data-ad-slot="9401396896"></ins>
                     {!! $results->body !!}
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                     <div class="row">
                         <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                             <div class="featured-inner">
